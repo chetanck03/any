@@ -50,7 +50,7 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
             <img 
-              src="/src/assets/img/ascentialabslogopng.png" 
+              src="/ascentialabslogopng.png" 
               alt="Ascentia Labs" 
               className="h-12 w-auto"
             />
