@@ -1,0 +1,260 @@
+const Services = () => {
+  const services = [
+    {
+      title: "Software Development",
+      icon: (
+        <svg className="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+        </svg>
+      )
+    },
+    {
+      title: "Digital Transformation",
+      icon: (
+        <svg className="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
+        </svg>
+      )
+    },
+    {
+      title: "Artificial Intelligence",
+      icon: (
+        <svg className="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        </svg>
+      ),
+      highlighted: true
+    },
+    {
+      title: "Mobile App Development",
+      icon: (
+        <svg className="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/>
+        </svg>
+      )
+    },
+    {
+      title: "Cloud Services",
+      icon: (
+        <svg className="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/>
+        </svg>
+      )
+    },
+    {
+      title: "Data Science & Analytics",
+      icon: (
+        <svg className="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+        </svg>
+      )
+    },
+    {
+      title: "IT Consulting",
+      icon: (
+        <svg className="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+      )
+    },
+    {
+      title: "Data Security",
+      icon: (
+        <svg className="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M18,8h-1V6c0-2.76-2.24-5-5-5S7,3.24,7,6v2H6c-1.1,0-2,0.9-2,2v10c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2V10C20,8.9,19.1,8,18,8z M12,17c-1.1,0-2-0.9-2-2s0.9-2,2-2s2,0.9,2,2S13.1,17,12,17z M15.1,8H8.9V6c0-1.71,1.39-3.1,3.1-3.1s3.1,1.39,3.1,3.1V8z"/>
+        </svg>
+      )
+    },
+    {
+      title: "Ideation & Design Strategy",
+      icon: (
+        <svg className="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M9 11H7v6h2v-6zm4 0h-2v6h2v-6zm4 0h-2v6h2v-6zm2.5-9H15V1h-2v1H9V1H7v1H4.5C3.67 2 3 2.67 3 3.5v15C3 19.33 3.67 20 4.5 20h15c.83 0 1.5-.67 1.5-1.5v-15C21 2.67 20.33 2 19.5 2z"/>
+        </svg>
+      )
+    },
+    {
+      title: "Business Intelligence",
+      icon: (
+        <svg className="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        </svg>
+      )
+    }
+  ];
+
+  return (
+    <section className="py-12 sm:py-16 bg-black text-white overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+        {/* Section Title with Animation */}
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in-up">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl  font-bold leading-tight max-w-4xl mx-auto">
+            <span className="inline-block animate-slide-in-left">At Ascentia Labs: We Develop World-Class Solutions</span>
+            <br className="hidden md:block" />
+            <span className="block mt-1 sm:mt-2 animate-slide-in-right delay-300">That Redefine Industry Standards & Add Value!</span>
+          </h2>
+        </div>
+
+        {/* Services Grid with Staggered Animations */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 lg:gap-6 max-w-6xl mx-auto">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className={`group relative p-3 sm:p-4 rounded-xl transition-all duration-500 hover:scale-110 cursor-pointer transform hover:-translate-y-2 ${
+                service.highlighted 
+                  ? 'bg-gradient-to-br from-blue-600 to-blue-800 border-2 border-blue-400 shadow-lg shadow-blue-500/25' 
+                  : 'bg-gray-800/80 hover:bg-gray-700/90 border border-gray-600/50 hover:border-blue-500/50'
+              }`}
+              style={{
+                animationDelay: `${index * 0.1}s`
+              }}
+            >
+              {/* Icon Container */}
+              <div className="flex justify-center mb-3">
+                <div className={`p-2 sm:p-3 rounded-full transition-all duration-500 group-hover:scale-125 group-hover:rotate-12 ${
+                  service.highlighted 
+                    ? 'bg-white/20 group-hover:bg-white/30' 
+                    : 'bg-gradient-to-br from-blue-600 to-blue-800 group-hover:from-blue-500 group-hover:to-blue-700 group-hover:shadow-lg group-hover:shadow-blue-500/50'
+                }`}>
+                  {service.icon}
+                </div>
+              </div>
+
+              {/* Service Title */}
+              <h3 className="text-center text-xs sm:text-sm font-semibold leading-tight px-1">
+                {service.title}
+              </h3>
+
+              {/* Enhanced Hover Effect Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-xl"></div>
+              
+              {/* Glowing Border Effect */}
+              <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-blue-500/20 via-transparent to-blue-500/20 blur-sm"></div>
+            </div>
+          ))}
+        </div>
+
+        {/* Floating Background Elements */}
+        {/* <div className="absolute top-1/4 left-10 w-2 h-2 bg-blue-500 rounded-full animate-float delay-1000"></div>
+        <div className="absolute top-3/4 right-10 w-3 h-3 bg-blue-400 rounded-full animate-float delay-2000"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-1 h-1 bg-white rounded-full animate-float delay-3000"></div> */}
+      </div>
+
+      {/* Custom CSS for Enhanced Animations */}
+      <style jsx>{`
+        @keyframes fade-in-up {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        @keyframes slide-in-left {
+          from {
+            opacity: 0;
+            transform: translateX(-50px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+        
+        @keyframes slide-in-right {
+          from {
+            opacity: 0;
+            transform: translateX(50px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+        
+        @keyframes pulse-glow {
+          0%, 100% {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+          }
+          50% {
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+          }
+        }
+        
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
+        }
+        
+        .animate-fade-in-up {
+          animation: fade-in-up 0.8s ease-out forwards;
+          opacity: 0;
+        }
+        
+        .animate-slide-in-left {
+          animation: slide-in-left 0.8s ease-out forwards;
+          opacity: 0;
+        }
+        
+        .animate-slide-in-right {
+          animation: slide-in-right 0.8s ease-out forwards;
+          opacity: 0;
+        }
+        
+        .animate-pulse-glow {
+          animation: pulse-glow 2s ease-in-out infinite;
+        }
+        
+        .animate-float {
+          animation: float 3s ease-in-out infinite;
+        }
+        
+        .delay-300 {
+          animation-delay: 0.3s;
+        }
+        
+        .delay-1000 {
+          animation-delay: 1s;
+        }
+        
+        .delay-2000 {
+          animation-delay: 2s;
+        }
+        
+        .delay-3000 {
+          animation-delay: 3s;
+        }
+        
+        /* Responsive Grid Improvements */
+        @media (max-width: 1024px) {
+          .grid {
+            grid-template-columns: repeat(3, 1fr);
+          }
+        }
+        
+        @media (max-width: 640px) {
+          .grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+          }
+        }
+        
+        @media (max-width: 480px) {
+          .grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+          }
+        }
+      `}</style>
+    </section>
+  );
+};
+
+export default Services;

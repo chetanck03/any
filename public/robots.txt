@@ -1,0 +1,26 @@
+# Robots.txt for Testing Environment
+# This prevents all search engines from indexing this testing site
+
+User-agent: *
+Disallow: /
+
+# Specific bot instructions
+User-agent: Googlebot
+Disallow: /
+
+User-agent: Bingbot
+Disallow: /
+
+User-agent: Slurp
+Disallow: /
+
+User-agent: DuckDuckBot
+Disallow: /
+
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: YandexBot
+Disallow: /
+
+# No sitemap provided for testing environment
