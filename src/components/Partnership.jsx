@@ -75,27 +75,27 @@ const Partnership = () => {
     return () => cancelAnimationFrame(animationId);
   }, [isHovered]);
 
-  // Partner logos - using actual images from assets
+  // Partner logos - using images from public folder
   const partnerLogos = [
-    { name: "Sunview", url: "/src/assets/img/home page/sunview 1.png" },
-    { name: "Sood", url: "/src/assets/img/home page/image (14).png" },
-    { name: "Insurance", url: "/src/assets/img/home page/logo-1a.jpg" },
-    { name: "Black Simple Photography", url: "/src/assets/img/home page/Black_Simple_Capture_Dream_Photography_Logo-removebg-preview.png" },
-    { name: "Simpra Logo", url: "/src/assets/img/home page/Simpra Logo.png" },
-    { name: "Centra Greens", url: "/src/assets/img/home page/Centra Greens 1.svg" },
-    { name: "KES", url: "/src/assets/img/home page/Kes 1.svg" },
-    { name: "Keva", url: "/src/assets/img/home page/Keva 1.svg" },
-    { name: "Wallace Cart", url: "/src/assets/img/home page/Wallage 1.svg" },
-    { name: "Gold Stone", url: "/src/assets/img/home page/Gold Stone 1.svg" },
-    { name: "Credmate", url: "/src/assets/img/home page/Credmate new 1.svg" },
-    { name: "Amar Jacquard", url: "/src/assets/img/home page/Amar Jacquard Black 1.svg" },
-    { name: "AMREP", url: "/src/assets/img/home page/Amrep 1.svg" },
-    { name: "Madhok Enterprises", url: "/src/assets/img/home page/Madhok Enterprises 1.svg" },
-    { name: "CIPT", url: "/src/assets/img/home page/CIPT 1.svg" },
-    { name: "George & Oakes", url: "/src/assets/img/home page/Go 1.svg" },
-    { name: "Pumpkins", url: "/src/assets/img/home page/pumpkins-logo-without-bg 1.svg" },
-    { name: "Read LDH Read", url: "/src/assets/img/home page/Read LDH Read 1.svg" },
-    { name: "Kiddogram", url: "/src/assets/img/home page/kg-logo_da441d57-7c34-4978-93b1-bf2e3fd45a02 1.svg" }
+    { name: "Sunview", url: "/partnerships/sunview-1.png" },
+    { name: "Sood", url: "/partnerships/image-14.png" },
+    { name: "Insurance", url: "/partnerships/logo-1a.jpg" },
+    { name: "Black Simple Photography", url: "/partnerships/black-simple-photography.png" },
+    { name: "Simpra Logo", url: "/partnerships/simpra-logo.png" },
+    { name: "Centra Greens", url: "/partnerships/centra-greens.svg" },
+    { name: "KES", url: "/partnerships/kes.svg" },
+    { name: "Keva", url: "/partnerships/keva.svg" },
+    { name: "Wallace Cart", url: "/partnerships/wallage.svg" },
+    { name: "Gold Stone", url: "/partnerships/gold-stone.svg" },
+    { name: "Credmate", url: "/partnerships/credmate.svg" },
+    { name: "Amar Jacquard", url: "/partnerships/amar-jacquard.svg" },
+    { name: "AMREP", url: "/partnerships/amrep.svg" },
+    { name: "Madhok Enterprises", url: "/partnerships/madhok-enterprises.svg" },
+    { name: "CIPT", url: "/partnerships/cipt.svg" },
+    { name: "George & Oakes", url: "/partnerships/go.svg" },
+    { name: "Pumpkins", url: "/partnerships/pumpkins.svg" },
+    { name: "Read LDH Read", url: "/partnerships/read-ldh-read.svg" },
+    { name: "Kiddogram", url: "/partnerships/kiddogram.svg" }
   ];
 
   // Triple the logos for seamless infinite scroll
