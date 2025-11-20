@@ -1,220 +1,272 @@
 const Industries = () => {
   const industries = [
     {
+      title: "Education",
       icon: (
-        <svg className="w-12 h-12 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4A1 1 0 0116 13H6a1 1 0 00-1 1v3a1 1 0 11-2 0V6z" clipRule="evenodd"/>
+        <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>
         </svg>
-      ),
-      title: "Healthcare App Development",
-      description: "Digital health solutions, patient management systems, and telemedicine platforms.",
-      projects: "25+ Projects",
-      color: "from-green-500 to-emerald-600"
+      )
     },
     {
+      title: "Healthcare",
       icon: (
-        <svg className="w-12 h-12 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+        <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M19 8h-2v3h-3v2h3v3h2v-3h3v-2h-3V8zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/>
         </svg>
-      ),
-      title: "Education App Development",
-      description: "E-learning platforms, student management systems, and educational mobile apps.",
-      projects: "30+ Projects",
-      color: "from-blue-500 to-indigo-600"
+      )
     },
     {
+      title: "Travel & Tourism",
       icon: (
-        <svg className="w-12 h-12 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm3 2h2a1 1 0 110 2H7a1 1 0 110-2zm5 0a1 1 0 100 2h1a1 1 0 100-2h-1zm-5 4h2a1 1 0 110 2H7a1 1 0 110-2zm5 0a1 1 0 100 2h1a1 1 0 100-2h-1z" clipRule="evenodd"/>
+        <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6h-5.6z"/>
         </svg>
-      ),
-      title: "Enterprise Resource Planning",
-      description: "ERP systems, CRM solutions, and business process automation tools.",
-      projects: "40+ Projects",
-      color: "from-purple-500 to-violet-600"
+      )
     },
     {
+      title: "Petcare",
       icon: (
-        <svg className="w-12 h-12 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clipRule="evenodd"/>
+        <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M4.5 12.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5S6.83 11 6 11s-1.5.67-1.5 1.5zM9 16c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5S9 15.17 9 16zm4.5-3c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zM12 4.5C10.07 2.91 7.45 2.91 5.5 4.5c-1.95 1.59-1.95 4.15 0 5.74L12 16.5l6.5-6.26c1.95-1.59 1.95-4.15 0-5.74C16.55 2.91 13.93 2.91 12 4.5z"/>
         </svg>
-      ),
-      title: "Real Estate App Development",
-      description: "Property management systems, virtual tours, and real estate marketplaces.",
-      projects: "20+ Projects",
-      color: "from-orange-500 to-red-600"
+      )
     },
     {
+      title: "E-Commerce",
       icon: (
-        <svg className="w-12 h-12 text-cyan-600" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+        <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12L8.1 13h7.45c.75 0 1.41-.41 1.75-1.03L21.7 4H5.21l-.94-2H1zm16 16c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
         </svg>
-      ),
-      title: "Travel App Development",
-      description: "Booking platforms, travel management systems, and tourism mobile apps.",
-      projects: "15+ Projects",
-      color: "from-cyan-500 to-blue-600"
+      )
     },
     {
-      icon: (
-        <svg className="w-12 h-12 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd"/>
-        </svg>
-      ),
       title: "Manufacturing",
-      description: "Supply chain management, inventory systems, and production tracking tools.",
-      projects: "18+ Projects",
-      color: "from-gray-500 to-slate-600"
+      icon: (
+        <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
+        </svg>
+      )
     },
     {
+      title: "Logistics",
       icon: (
-        <svg className="w-12 h-12 text-yellow-600" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
-          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clipRule="evenodd"/>
+        <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
         </svg>
-      ),
-      title: "Finance",
-      description: "Fintech solutions, payment gateways, and financial management systems.",
-      projects: "22+ Projects",
-      color: "from-yellow-500 to-amber-600"
+      )
     },
     {
+      title: "Parking",
       icon: (
-        <svg className="w-12 h-12 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
-          <path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1V8a1 1 0 00-1-1h-3z"/>
+        <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M13 3H6v18h4v-6h3c3.31 0 6-2.69 6-6s-2.69-6-6-6zm.2 8H10V7h3.2c1.1 0 2 .9 2 2s-.9 2-2 2z"/>
         </svg>
-      ),
-      title: "Logistics Software Development",
-      description: "Fleet management, route optimization, and delivery tracking systems.",
-      projects: "12+ Projects",
-      color: "from-teal-500 to-green-600"
+      )
+    },
+    {
+      title: "Wellness & Health",
+      icon: (
+        <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+      )
+    },
+    {
+      title: "Real Estate",
+      icon: (
+        <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+        </svg>
+      )
     }
   ];
 
   return (
-    <section id="industries" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-blue-600 to-black bg-clip-text text-transparent">
-              Industries We Serve
-            </span>
+    <section className="py-12 sm:py-16 overflow-hidden" style={{ background: 'linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)' }}>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+        {/* Section Title with Animation */}
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in-up">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight max-w-4xl mx-auto">
+            <span className="inline-block animate-slide-in-left">One Vision, Many Industries: Crafting Our</span>
+            <br className="hidden md:block" />
+            <span className="block mt-1 sm:mt-2 animate-slide-in-right delay-300">Bespoke Solutions For Unique Industry Demands</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We craft personalized solutions across various industries, helping businesses transform and grow with cutting-edge technology.
-          </p>
         </div>
 
-        {/* Industries Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        {/* Industries Grid with Enhanced Cards */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto mb-12">
           {industries.map((industry, index) => (
-            <div 
+            <div
               key={index}
-              className="group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 overflow-hidden"
+              className="group relative flex flex-col items-center p-4 sm:p-6 bg-blue-500/20 backdrop-blur-md rounded-2xl border border-blue-300/30 hover:bg-blue-400/30 transition-all duration-500 hover:scale-105 cursor-pointer transform hover:-translate-y-3 shadow-lg hover:shadow-2xl hover:shadow-blue-500/25"
+              style={{
+                animationDelay: `${index * 0.1}s`
+              }}
             >
-              {/* Background Gradient */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${industry.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
-              
-              {/* Content */}
-              <div className="relative z-10">
-                {/* Icon */}
-                <div className="mb-6 group-hover:scale-110 transition-transform duration-300 flex justify-center">
-                  <div className="p-4 bg-gray-50 rounded-2xl group-hover:bg-gray-100 transition-colors duration-300">
-                    {industry.icon}
-                  </div>
-                </div>
-
-                {/* Title */}
-                <h3 className="text-xl font-bold mb-3 text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
-                  {industry.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                  {industry.description}
-                </p>
-
-                {/* Projects Count */}
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-semibold text-blue-600">
-                    {industry.projects}
-                  </span>
-                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300">
-                    <svg className="w-4 h-4 text-blue-600 group-hover:text-white transition-colors duration-300" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"/>
-                    </svg>
-                  </div>
+              {/* Icon Container with Better Styling */}
+              <div className="flex justify-center mb-4">
+                <div className="p-3 sm:p-4 rounded-2xl bg-white shadow-md group-hover:shadow-lg group-hover:bg-blue-50 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6">
+                  {industry.icon}
                 </div>
               </div>
+
+              {/* Industry Title */}
+              <h3 className="text-center text-sm sm:text-base font-bold text-white leading-tight px-2">
+                {industry.title}
+              </h3>
+
+              {/* Animated Background Effects */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-300/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-2xl"></div>
+              
+              {/* Glowing Border Effect */}
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-300/40 via-transparent to-blue-300/40 rounded-2xl blur-sm"></div>
+              </div>
+
+              {/* Floating Animation Dots */}
+              <div className="absolute -top-1 -right-1 w-2 h-2 bg-blue-300 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 animate-bounce"></div>
+              <div className="absolute -bottom-1 -left-1 w-1.5 h-1.5 bg-blue-200 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-700 animate-pulse"></div>
             </div>
           ))}
         </div>
 
-        {/* Featured Case Study */}
-        <div className="bg-gradient-to-r from-blue-50 to-gray-50 rounded-2xl p-12">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-3xl font-bold mb-6 text-gray-800">
-                Success Story: Healthcare Innovation
-              </h3>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                We developed a comprehensive telemedicine platform that connected over 10,000 patients with healthcare providers, reducing consultation time by 60% and improving patient satisfaction scores.
-              </p>
-              
-              <div className="grid grid-cols-3 gap-6 mb-8">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600">10K+</div>
-                  <div className="text-sm text-gray-600">Patients Connected</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600">60%</div>
-                  <div className="text-sm text-gray-600">Time Reduction</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600">95%</div>
-                  <div className="text-sm text-gray-600">Satisfaction Rate</div>
-                </div>
-              </div>
-
-              <button className="bg-gradient-to-r from-blue-600 to-black text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
-                View Case Study
-              </button>
-            </div>
-
-            <div className="relative">
-              <div className="bg-white rounded-2xl p-8 shadow-xl">
-                <div className="bg-gradient-to-br from-blue-600 to-black rounded-xl p-6 text-white mb-6">
-                  <h4 className="text-xl font-bold mb-2">Healthcare Platform</h4>
-                  <p className="text-blue-100 text-sm">Telemedicine & Patient Management</p>
-                </div>
-                
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-600">Patient Portal</span>
-                    <div className="w-20 h-2 bg-blue-100 rounded-full">
-                      <div className="w-16 h-2 bg-blue-600 rounded-full"></div>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-600">Video Consultation</span>
-                    <div className="w-20 h-2 bg-blue-100 rounded-full">
-                      <div className="w-18 h-2 bg-blue-600 rounded-full"></div>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-600">Appointment System</span>
-                    <div className="w-20 h-2 bg-blue-100 rounded-full">
-                      <div className="w-full h-2 bg-blue-600 rounded-full"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        {/* Call to Action Section - Centered */}
+        <div className="text-center mt-16">
+         
+          
+          {/* Centered Button */}
+          <div className="flex justify-center">
+            <button className="group relative px-8 py-4 bg-white text-blue-600 font-bold text-lg rounded-full shadow-xl hover:shadow-2xl hover:shadow-blue-500/30 transform hover:scale-105 transition-all duration-300 hover:bg-blue-50 overflow-hidden">
+              <span className="relative z-10">Consult Our Experts Today</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
+              <div className="absolute -top-1 -right-1 w-3 h-3 bg-blue-400 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 animate-ping"></div>
+            </button>
           </div>
         </div>
+
+    
       </div>
+
+      {/* Custom CSS for Enhanced Animations */}
+      <style jsx>{`
+        @keyframes fade-in-up {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        @keyframes slide-in-left {
+          from {
+            opacity: 0;
+            transform: translateX(-50px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+        
+        @keyframes slide-in-right {
+          from {
+            opacity: 0;
+            transform: translateX(50px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+        
+        @keyframes gentle-float {
+          0%, 100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-8px);
+          }
+        }
+        
+        @keyframes pulse-glow {
+          0%, 100% {
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+          }
+          50% {
+            box-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
+          }
+        }
+        
+        .animate-fade-in-up {
+          animation: fade-in-up 0.8s ease-out forwards;
+          opacity: 0;
+        }
+        
+        .animate-slide-in-left {
+          animation: slide-in-left 0.8s ease-out forwards;
+          opacity: 0;
+        }
+        
+        .animate-slide-in-right {
+          animation: slide-in-right 0.8s ease-out forwards;
+          opacity: 0;
+        }
+        
+        .delay-300 {
+          animation-delay: 0.3s;
+        }
+        
+        /* Enhanced hover effects */
+        .group:hover {
+          animation: gentle-float 2s ease-in-out infinite;
+        }
+        
+        /* Button hover effects */
+        button:hover {
+          animation: pulse-glow 1.5s ease-in-out infinite;
+        }
+        
+        /* Responsive Grid Improvements */
+        @media (max-width: 1024px) {
+          .grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+          }
+        }
+        
+        @media (max-width: 640px) {
+          .grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+          }
+        }
+        
+        @media (max-width: 480px) {
+          .grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+          }
+        }
+        
+        /* Mobile CTA adjustments */
+        @media (max-width: 640px) {
+          .text-center div {
+            padding: 1.5rem;
+          }
+          
+          .text-center h3 {
+            font-size: 1.5rem;
+          }
+          
+          .text-center p {
+            font-size: 1rem;
+          }
+        }
+      `}</style>
     </section>
   );
 };

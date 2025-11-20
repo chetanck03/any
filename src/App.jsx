@@ -17,8 +17,8 @@ function App() {
       <Hero />
       <Services />
       <Partnership />
-      <About />
       <Industries />
+      <About />
       <Portfolio />
       <Testimonials />
       <Contact />
