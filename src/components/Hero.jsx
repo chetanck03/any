@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <section id="home" className="relative bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 overflow-hidden flex items-center min-h-screen sm:min-h-[calc(100vh-80px)]">
+    <section id="home" className="relative bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 overflow-hidden flex items-center min-h-screen">
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 relative z-10 w-full max-w-7xl">
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 xl:gap-16 lg:items-center relative">
           {/* Left Section */}
