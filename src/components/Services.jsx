@@ -85,7 +85,7 @@ const Services = () => {
 
   return (
     <section className="py-12 sm:py-16 bg-black text-white overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         {/* Section Title with Animation */}
         <div className="text-center mb-12 sm:mb-16 animate-fade-in-up">
           <h2 className="text-2xl sm:text-3xl md:text-4xl  font-bold leading-tight max-w-4xl mx-auto">
@@ -96,7 +96,7 @@ const Services = () => {
         </div>
 
         {/* Services Grid with Staggered Animations */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 lg:gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-8 max-w-7xl mx-auto">
           {services.map((service, index) => (
             <div
               key={index}

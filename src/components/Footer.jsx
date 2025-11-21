@@ -21,7 +21,7 @@ const Footer = () => {
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
 
       {/* Call to Action Section */}
-      <div className="relative z-10 py-16 sm:py-20">
+      <div className="relative z-10 py-12 sm:py-16 lg:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
           <div className="text-center mb-16">
             {/* Footsteps Icon */}
@@ -34,10 +34,10 @@ const Footer = () => {
               </div>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-4">
               Ready To Take Next Step?
             </h2>
-            <p className="text-lg sm:text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg lg:text-xl text-blue-100 mb-8 max-w-2xl mx-auto px-4">
               Contact with our experts today!
             </p>
             

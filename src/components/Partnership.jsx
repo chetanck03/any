@@ -7,7 +7,7 @@ const LogoItem = ({ logo }) => {
 
   return (
     <div
-      className="relative flex-shrink-0 w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 flex flex-col items-center justify-center bg-white rounded-2xl hover:bg-gray-50 transition-all duration-500 hover:scale-110 hover:-translate-y-2 mb-12 shadow-lg hover:shadow-2xl border border-gray-100 group"
+      className="relative flex-shrink-0 w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 flex flex-col items-center justify-center bg-white rounded-2xl hover:bg-gray-50 transition-all duration-500 hover:scale-110 hover:-translate-y-2 mb-8 sm:mb-12 shadow-lg hover:shadow-2xl border border-gray-100 group"
       onMouseEnter={() => setShowTooltip(true)}
       onMouseLeave={() => setShowTooltip(false)}
     >
@@ -102,16 +102,16 @@ const Partnership = () => {
   const duplicatedLogos = [...partnerLogos, ...partnerLogos, ...partnerLogos];
 
   return (
-    <section className="relative py-16 bg-gray-50 overflow-hidden">
-      <div className="relative z-10 container mx-auto px-4">
+    <section className="relative py-12 sm:py-16 bg-gray-50 overflow-hidden">
+      <div className="relative z-10 container mx-auto px-4 max-w-7xl">
         {/* Header */}
-        <div className="text-center mb-12">
-         <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+        <div className="text-center mb-8 sm:mb-12">
+         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
             <span className="bg-gradient-to-r from-blue-600 to-black bg-clip-text text-transparent">
              Our Impactful Partnerships
             </span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
             Our solutions have enabled businesses in a variety of industries to achieve remarkable outcomes, 
             ranging from streamlined operations to exponential growth.
           </p>
@@ -119,14 +119,14 @@ const Partnership = () => {
 
         {/* Infinite scroll container */}
         <div
-          className="relative carousel-container pb-16"
+          className="relative carousel-container pb-12 sm:pb-16"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
           {/* Scrollable container with proper padding and overflow handling */}
           <div
             ref={scrollContainerRef}
-            className="flex space-x-6 md:space-x-8 lg:space-x-12 overflow-x-auto scrollbar-hide px-6 py-4"
+            className="flex space-x-4 sm:space-x-6 md:space-x-8 lg:space-x-12 overflow-x-auto scrollbar-hide px-4 sm:px-6 py-4"
             style={{
               scrollbarWidth: 'none',
               msOverflowStyle: 'none'

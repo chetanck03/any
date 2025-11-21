@@ -4,8 +4,8 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-[9999]">
-      <div className="container mx-auto px-4">
+    <header className="bg-white shadow-lg sticky top-0 z-[9999] w-full">
+      <div className="container mx-auto px-4 max-w-7xl">
         {/* Top Bar */}
         <div className="hidden md:flex justify-between items-center py-2 text-sm border-b border-gray-100">
           <div className="flex items-center space-x-6">
@@ -47,12 +47,12 @@ const Header = () => {
         </div>
 
         {/* Main Navigation */}
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-3 sm:py-4">
           <div className="flex items-center">
             <img 
               src="/ascentialabslogopng.png" 
               alt="Ascentia Labs" 
-              className="h-12 w-auto"
+              className="h-10 sm:h-12 w-auto"
             />
           </div>
 
