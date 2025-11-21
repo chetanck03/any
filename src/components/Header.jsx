@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   return (
     <header className="bg-white shadow-lg fixed top-0 left-0 right-0 z-[9999] w-full">
@@ -53,17 +55,37 @@ const Header = () => {
         {/* Main Navigation */}
         <div className="flex justify-between items-center py-3 sm:py-4">
           <div className="flex items-center">
-            <img 
-              src="/ascentialabslogopng.png" 
-              alt="Ascentia Labs" 
-              className="h-10 sm:h-12 w-auto"
-            />
+            <Link to="/">
+              <img 
+                src="/ascentialabslogopng.png" 
+                alt="Ascentia Labs" 
+                className="h-10 sm:h-12 w-auto hover:opacity-80 transition-opacity"
+              />
+            </Link>
           </div>
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex space-x-8">
-            <a  className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Home</a>
-            <a  className="text-gray-700 hover:text-blue-600 font-medium transition-colors">About Us</a>
+            <Link 
+              to="/" 
+              className={`font-medium transition-colors ${
+                location.pathname === '/' 
+                  ? 'text-blue-600' 
+                  : 'text-gray-700 hover:text-blue-600'
+              }`}
+            >
+              Home
+            </Link>
+            <Link 
+              to="/about" 
+              className={`font-medium transition-colors ${
+                location.pathname === '/about' 
+                  ? 'text-blue-600' 
+                  : 'text-gray-700 hover:text-blue-600'
+              }`}
+            >
+              About Us
+            </Link>
             <div className="relative group">
               <button className="text-gray-700 hover:text-blue-600 font-medium flex items-center transition-colors">
                 Services 
@@ -151,8 +173,28 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-100">
             <nav className="flex flex-col space-y-4">
-              <a  className="text-gray-700 hover:text-blue-600 font-medium">Home</a>
-              <a  className="text-gray-700 hover:text-blue-600 font-medium">About Us</a>
+              <Link 
+                to="/" 
+                className={`font-medium transition-colors ${
+                  location.pathname === '/' 
+                    ? 'text-blue-600' 
+                    : 'text-gray-700 hover:text-blue-600'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Home
+              </Link>
+              <Link 
+                to="/about" 
+                className={`font-medium transition-colors ${
+                  location.pathname === '/about' 
+                    ? 'text-blue-600' 
+                    : 'text-gray-700 hover:text-blue-600'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About Us
+              </Link>
               <a  className="text-gray-700 hover:text-blue-600 font-medium">Services</a>
               <a className="text-gray-700 hover:text-blue-600 font-medium">Industries</a>
               <a  className="text-gray-700 hover:text-blue-600 font-medium">Contact</a>

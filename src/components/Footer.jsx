@@ -157,7 +157,7 @@ const Footer = () => {
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
             <div className="flex items-center space-x-3">
               <img 
-                src="/public/ascentialabslogowhite.png" 
+                src="/ascentialabslogowhite.png" 
                 alt="Ascentia Labs" 
                 className="h-8 w-auto"
                 onError={(e) => {
