@@ -4,7 +4,7 @@ const Hero = () => {
       <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 relative z-10 w-full">
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 xl:gap-16 lg:items-center relative">
           {/* Left Section */}
-          <div className="text-center lg:text-left px-2 sm:px-4 md:px-6 lg:px-0 opacity-0 animate-slideInLeft w-full">
+          <div className="text-center lg:text-left px-2 mt-3 sm:px-4 md:px-6 lg:px-0 opacity-0 animate-slideInLeft w-full">
             <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight text-blue-600">
               <span className="block">Building Tomorrow's</span>
               <span className="block text-gray-800">Digital Solutions</span>
@@ -58,8 +58,8 @@ const Hero = () => {
           </div>
 
           {/* Right Section */}
-          <div className="relative px-2 sm:px-4 md:px-6 lg:px-0 mt-6 sm:mt-8 lg:mt-0 opacity-0 animate-slideInRight w-full">
-            <div className="bg-white rounded-xl sm:rounded-2xl shadow-2xl p-4 sm:p-6 md:p-8 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto hover:shadow-3xl transition-all duration-300">
+          <div className="relative px-2 sm:px-4 md:px-6 lg:px-0 mt-0 sm:mt-8 lg:mt-0 mb-8 sm:mb-0 opacity-0 animate-slideInRight w-full">
+            <div className="bg-white rounded-xl sm:rounded-2xl shadow-2xl p-4 pb-10 sm:p-6 md:p-8 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto mt-6 mb-4 sm:my-0 hover:shadow-3xl transition-all duration-300">
               {/* RouteMaestro Logo */}
               <div className="flex items-center justify-center mb-4 sm:mb-6">
                 <img 
@@ -75,29 +75,33 @@ const Hero = () => {
               </p>
 
               {/* Features */}
-              <div className="flex justify-center items-center gap-4 sm:gap-6 mb-6 px-2">
+              <div className="flex justify-center items-center gap-4 sm:gap-6 mb-10 sm:mb-6 px-2">
                 <div className="text-center flex-1">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-1 sm:mb-2 hover:bg-blue-200 transition-colors duration-300 hover:scale-110 transform">
-                    <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M9.504 1.132a1 1 0 01.992 0l1.75 1a1 1 0 11-.992 1.736L10 3.152l-1.254.716a1 1 0 11-.992-1.736l1.75-1zM5.618 4.504a1 1 0 01-.372 1.364L5.016 6l.23.132a1 1 0 11-.992 1.736L4 7.723V8a1 1 0 01-2 0V6a.996.996 0 01.52-.878l1.734-.99a1 1 0 011.364.372zm8.764 0a1 1 0 011.364-.372l1.733.99A1.002 1.002 0 0118 6v2a1 1 0 11-2 0v-.277l-.254.145a1 1 0 11-.992-1.736l.23-.132-.23-.132a1 1 0 01-.372-1.364zm-7 4a1 1 0 011.364-.372L10 8.848l1.254-.716a1 1 0 11.992 1.736L11 10.152V12a1 1 0 11-2 0v-1.848l-1.246-.716a1 1 0 01-.372-1.364zM3 11a1 1 0 011 1v1.267l1.16.665a1 1 0 11-.992 1.736l-1.734-.99A1 1 0 012 14v-2a1 1 0 011-1zm14 0a1 1 0 011 1v2a1.002 1.002 0 01-.504.868l-1.734.99a1 1 0 11-.992-1.736L16 13.267V12a1 1 0 011-1zM9.504 17.132a1 1 0 01.992 0l1.75 1a1 1 0 11-.992 1.736L10 19.152l-1.254.716a1 1 0 11-.992-1.736l1.75-1z" clipRule="evenodd"/>
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-2 hover:bg-blue-200 transition-colors duration-300 hover:scale-110 transform">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-blue-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
                     </svg>
                   </div>
                   <span className="text-gray-700 font-medium text-xs leading-tight">Smart Route Planning</span>
                 </div>
                 
                 <div className="text-center flex-1">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-1 sm:mb-2 hover:bg-blue-200 transition-colors duration-300 hover:scale-110 transform">
-                    <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"/>
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-2 hover:bg-blue-200 transition-colors duration-300 hover:scale-110 transform">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-blue-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12,6 12,12 16,14"></polyline>
                     </svg>
                   </div>
                   <span className="text-gray-700 font-medium text-xs leading-tight">Real-time Tracking</span>
                 </div>
                 
                 <div className="text-center flex-1">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-1 sm:mb-2 hover:bg-blue-200 transition-colors duration-300 hover:scale-110 transform">
-                    <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-2 hover:bg-blue-200 transition-colors duration-300 hover:scale-110 transform">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-blue-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                      <line x1="18" y1="20" x2="18" y2="10"></line>
+                      <line x1="12" y1="20" x2="12" y2="4"></line>
+                      <line x1="6" y1="20" x2="6" y2="14"></line>
                     </svg>
                   </div>
                   <span className="text-gray-700 font-medium text-xs leading-tight">Analytics Dashboard</span>

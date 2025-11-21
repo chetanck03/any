@@ -79,6 +79,46 @@ const Industries = () => {
           <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
         </svg>
       )
+    },
+    {
+      title: "Accounting",
+      icon: (
+        <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+        </svg>
+      )
+    },
+    {
+      title: "Restaurants",
+      icon: (
+        <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M8.1 13.34l2.83-2.83L3.91 3.5c-.78-.78-2.05-.78-2.83 0-.78.78-.78 2.05 0 2.83l7.02 7.01zm6.78-1.81c1.53.71 3.68.21 5.27-1.38 1.91-1.91 2.28-4.65.81-6.12-1.46-1.46-4.20-1.10-6.12.81-1.59 1.59-2.09 3.74-1.38 5.27L3.7 19.87l1.41 1.41L12 14.41l6.88 6.88 1.41-1.41L13.41 13l1.47-1.47z"/>
+        </svg>
+      )
+    },
+    {
+      title: "Agriculture",
+      icon: (
+        <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.54 0 3-.35 4.31-.99l-1.24-1.24C14.13 20.57 13.11 21 12 21c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9c0 1.11-.43 2.13-1.23 3.07l1.24 1.24C21.65 15 22 13.54 22 12c0-5.52-4.48-10-10-10zm-1 5v6l4.25 2.52.77-1.28L13 12.5V7h-2z"/>
+        </svg>
+      )
+    },
+    {
+      title: "Architecture",
+      icon: (
+        <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M6.36 18.78L6.61 21l1.62-1.54 2.77-2.77-.7-.7-2.77 2.77L6.36 18.78zm.24-2.83l2.77 2.77 8.46-8.46-2.77-2.77L6.6 15.95zm11.31-11.31c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+        </svg>
+      )
+    },
+    {
+      title: "After Sale Service",
+      icon: (
+        <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+        </svg>
+      )
     }
   ];
 

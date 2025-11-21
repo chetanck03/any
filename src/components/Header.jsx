@@ -58,8 +58,8 @@ const Header = () => {
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#home" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Home</a>
-            <a href="#about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">About Us</a>
+            <a  className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Home</a>
+            <a  className="text-gray-700 hover:text-blue-600 font-medium transition-colors">About Us</a>
             <div className="relative group">
               <button className="text-gray-700 hover:text-blue-600 font-medium flex items-center transition-colors">
                 Services 
@@ -70,7 +70,7 @@ const Header = () => {
               <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
                 <div className="p-6">
                   <div className="grid grid-cols-1 gap-3">
-                    <a href="#" className="flex items-center py-3 px-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all">
+                    <a  className="flex items-center py-3 px-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all">
                       <svg className="w-5 h-5 mr-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm0 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1v-2z" clipRule="evenodd"/>
                       </svg>
@@ -79,7 +79,7 @@ const Header = () => {
                         <div className="text-sm text-gray-500">Tailored solutions for your business</div>
                       </div>
                     </a>
-                    <a href="#" className="flex items-center py-3 px-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all">
+                    <a  className="flex items-center py-3 px-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all">
                       <svg className="w-5 h-5 mr-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clipRule="evenodd"/>
                       </svg>
@@ -110,8 +110,8 @@ const Header = () => {
                 </div>
               </div>
             </div>
-            <a href="#industries" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Industries</a>
-            <a href="#contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Contact</a>
+            <a  className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Industries</a>
+            <a  className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Contact</a>
           </nav>
 
           <button className="hidden md:block bg-gradient-to-r from-blue-600 to-black text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105">
@@ -135,11 +135,11 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-100">
             <nav className="flex flex-col space-y-4">
-              <a href="#home" className="text-gray-700 hover:text-blue-600 font-medium">Home</a>
-              <a href="#about" className="text-gray-700 hover:text-blue-600 font-medium">About Us</a>
-              <a href="#services" className="text-gray-700 hover:text-blue-600 font-medium">Services</a>
-              <a href="#industries" className="text-gray-700 hover:text-blue-600 font-medium">Industries</a>
-              <a href="#contact" className="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+              <a  className="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+              <a  className="text-gray-700 hover:text-blue-600 font-medium">About Us</a>
+              <a  className="text-gray-700 hover:text-blue-600 font-medium">Services</a>
+              <a className="text-gray-700 hover:text-blue-600 font-medium">Industries</a>
+              <a  className="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
               <button className="bg-gradient-to-r from-blue-600 to-black text-white px-6 py-2 rounded-full w-fit">
                 Get In Touch
               </button>
