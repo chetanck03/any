@@ -1,6 +1,6 @@
 const SoftwareProducts = () => {
   return (
-    <section className="software-products-section py-16 sm:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-100 relative overflow-hidden">
+    <section className="py-16 sm:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-100 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-50/30 to-purple-50/30"></div>
       <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-blue-200/20 to-purple-200/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
@@ -20,13 +20,13 @@ const SoftwareProducts = () => {
         </div>
 
         {/* Software Products Grid */}
-        <div className="software-products-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 px-4 sm:px-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 px-4 sm:px-0 responsive-grid-sm">
           {/* Route Maestro */}
           <a 
             href="https://www.routemaestro.com" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="software-product-card group relative bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 border border-gray-100 hover:border-red-200 min-h-[280px] flex flex-col justify-center items-center text-center cursor-pointer"
+            className="group relative bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 border border-gray-100 hover:border-red-200 min-h-[280px] flex flex-col justify-center items-center text-center cursor-pointer mobile-no-hover"
           >
             <div className="flex justify-center mb-6">
               <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center bg-red-50 rounded-xl group-hover:bg-red-100 transition-all duration-300 group-hover:scale-110">
@@ -54,7 +54,7 @@ const SoftwareProducts = () => {
           </a>
 
           {/* Insurance Safe */}
-          <div className="software-product-card group relative bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 border border-gray-100 hover:border-blue-200 min-h-[280px] flex flex-col justify-center items-center text-center">
+          <div className="group relative bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 border border-gray-100 hover:border-blue-200 min-h-[280px] flex flex-col justify-center items-center text-center mobile-no-hover">
             <div className="flex justify-center mb-6">
               <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center bg-blue-50 rounded-xl group-hover:bg-blue-100 transition-all duration-300 group-hover:scale-110">
                 <img
@@ -74,7 +74,7 @@ const SoftwareProducts = () => {
           </div>
 
           {/* Kinder Connect */}
-          <div className="software-product-card group relative bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 border border-gray-100 hover:border-orange-200 min-h-[280px] flex flex-col justify-center items-center text-center">
+          <div className="group relative bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 border border-gray-100 hover:border-orange-200 min-h-[280px] flex flex-col justify-center items-center text-center mobile-no-hover">
             <div className="flex justify-center mb-6">
               <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center bg-orange-50 rounded-xl group-hover:bg-orange-100 transition-all duration-300 group-hover:scale-110">
                 <img
@@ -94,7 +94,7 @@ const SoftwareProducts = () => {
           </div>
 
           {/* JusDoIt */}
-          <div className="software-product-card group relative bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 border border-gray-100 hover:border-green-200 min-h-[280px] flex flex-col justify-center items-center text-center">
+          <div className="group relative bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 border border-gray-100 hover:border-green-200 min-h-[280px] flex flex-col justify-center items-center text-center mobile-no-hover">
             <div className="flex justify-center mb-6">
               <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center bg-green-50 rounded-xl group-hover:bg-green-100 transition-all duration-300 group-hover:scale-110">
                 <img
@@ -115,111 +115,7 @@ const SoftwareProducts = () => {
         </div>
       </div>
 
-      {/* Custom Animations */}
-      <style jsx>{`
-        @keyframes fade-in-up {
-          from {
-            opacity: 0;
-            transform: translateY(40px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        
-        .animate-fade-in-up {
-          animation: fade-in-up 0.8s ease-out forwards;
-          opacity: 0;
-        }
-        
-        /* Software Products specific styles */
-        .software-products-section .group {
-          will-change: transform, box-shadow;
-        }
-        
-        /* Mobile optimizations - only for software products */
-        @media (max-width: 640px) {
-          .software-products-section .software-products-grid {
-            grid-template-columns: repeat(1, 1fr) !important;
-            gap: 1.5rem;
-            max-width: 320px;
-            margin: 0 auto;
-          }
-          
-          .software-products-section .software-product-card {
-            min-height: 320px;
-            padding: 2rem 1.5rem;
-          }
-          
-          /* Larger image containers on mobile */
-          .software-products-section .software-product-card > div:first-child > div {
-            width: 5rem !important;
-            height: 5rem !important;
-            margin-bottom: 1.5rem;
-          }
-          
-          /* Larger images on mobile */
-          .software-products-section .software-product-card img {
-            width: 3rem !important;
-            height: 3rem !important;
-          }
-          
-          .software-products-section .software-product-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-          }
-          
-          .software-products-section .software-product-card p {
-            font-size: 0.875rem;
-            line-height: 1.5;
-          }
-          
-          .software-products-section .software-product-card:hover {
-            transform: none;
-            scale: none;
-          }
-          
-          .software-products-section .software-product-card:active {
-            transform: scale(0.98);
-            transition: transform 0.1s ease;
-          }
-        }
-        
-        @media (max-width: 480px) {
-          .software-products-section .software-products-grid {
-            grid-template-columns: repeat(1, 1fr) !important;
-            gap: 1.25rem;
-            max-width: 300px;
-            margin: 0 auto;
-          }
-          
-          .software-products-section .software-product-card {
-            min-height: 300px;
-            padding: 1.75rem 1.25rem;
-          }
-          
-          /* Even larger images on smaller mobile */
-          .software-products-section .software-product-card > div:first-child > div {
-            width: 6rem !important;
-            height: 6rem !important;
-            margin-bottom: 1.5rem;
-          }
-          
-          .software-products-section .software-product-card img {
-            width: 3.5rem !important;
-            height: 3.5rem !important;
-          }
-          
-          .software-products-section .software-product-card h3 {
-            font-size: 1.125rem;
-          }
-          
-          .software-products-section .software-product-card p {
-            font-size: 0.8rem;
-          }
-        }
-      `}</style>
+
     </section>
   );
 };

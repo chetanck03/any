@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
   Settings, 
@@ -26,7 +26,33 @@ import {
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const location = useLocation();
+
+  // Handle body scroll lock when mobile menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add('mobile-menu-open');
+      // Store current scroll position
+      const scrollY = window.scrollY;
+      document.body.style.top = `-${scrollY}px`;
+    } else {
+      document.body.classList.remove('mobile-menu-open');
+      // Restore scroll position
+      const scrollY = document.body.style.top;
+      document.body.style.top = '';
+      if (scrollY) {
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+      }
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.classList.remove('mobile-menu-open');
+      document.body.style.top = '';
+    };
+  }, [isMenuOpen]);
 
   return (
     <header className="bg-white shadow-lg fixed top-0 left-0 right-0 z-[9999] w-full">
@@ -224,7 +250,13 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button 
             className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={() => {
+              setIsMenuOpen(!isMenuOpen);
+              if (!isMenuOpen) {
+                setIsIndustriesOpen(false);
+                setIsServicesOpen(false);
+              }
+            }}
           >
             <div className="w-6 h-6 flex flex-col justify-center items-center">
               <span className={`bg-gray-600 block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isMenuOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>
@@ -236,44 +268,127 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-100">
-            <nav className="flex flex-col space-y-4">
+          <div className="md:hidden py-4 border-t border-gray-100 max-h-[calc(100vh-140px)] overflow-y-auto">
+            <nav className="flex flex-col space-y-2">
               <Link 
                 to="/" 
-                className={`font-medium transition-colors ${
+                className={`font-medium transition-colors py-2 px-4 rounded ${
                   location.pathname === '/' 
-                    ? 'text-blue-600' 
-                    : 'text-gray-700 hover:text-blue-600'
+                    ? 'text-blue-600 bg-blue-50' 
+                    : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </Link>
+              
               <Link 
                 to="/about" 
-                className={`font-medium transition-colors ${
+                className={`font-medium transition-colors py-2 px-4 rounded ${
                   location.pathname === '/about' 
-                    ? 'text-blue-600' 
-                    : 'text-gray-700 hover:text-blue-600'
+                    ? 'text-blue-600 bg-blue-50' 
+                    : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 About Us
               </Link>
-              <a  className="text-gray-700 hover:text-blue-600 font-medium">Services</a>
-              <Link 
-                to="/industries" 
-                className={`font-medium transition-colors ${
-                  location.pathname === '/industries' 
-                    ? 'text-blue-600' 
-                    : 'text-gray-700 hover:text-blue-600'
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Industries
-              </Link>
-              <a  className="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
-              <button className="bg-gradient-to-r from-blue-600 to-black text-white px-6 py-2 rounded-full w-fit">
+
+              {/* Services Accordion */}
+              <div className="border-b border-gray-100">
+                <button 
+                  className="w-full flex items-center justify-between py-2 px-4 text-gray-700 hover:text-blue-600 hover:bg-gray-50 font-medium rounded transition-colors"
+                  onClick={() => setIsServicesOpen(!isServicesOpen)}
+                >
+                  Services
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                
+                {isServicesOpen && (
+                  <div className="pb-2 space-y-1 max-h-60 overflow-y-auto">
+                    <a className="flex items-center py-2 px-6 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition-all">
+                      <Code className="w-4 h-4 mr-3 text-blue-600" />
+                      <span className="text-sm">Custom Software Development</span>
+                    </a>
+                    <a className="flex items-center py-2 px-6 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition-all">
+                      <Monitor className="w-4 h-4 mr-3 text-blue-600" />
+                      <span className="text-sm">Web Development</span>
+                    </a>
+                    <a className="flex items-center py-2 px-6 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition-all">
+                      <Smartphone className="w-4 h-4 mr-3 text-blue-600" />
+                      <span className="text-sm">Mobile App Development</span>
+                    </a>
+                    <a className="flex items-center py-2 px-6 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition-all">
+                      <ShoppingCart className="w-4 h-4 mr-3 text-blue-600" />
+                      <span className="text-sm">E-Commerce Solutions</span>
+                    </a>
+                  </div>
+                )}
+              </div>
+
+              {/* Industries Accordion */}
+              <div className="border-b border-gray-100">
+                <button 
+                  className="w-full flex items-center justify-between py-3 px-4 bg-blue-600 text-white font-medium rounded transition-colors"
+                  onClick={() => setIsIndustriesOpen(!isIndustriesOpen)}
+                >
+                  INDUSTRIES
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isIndustriesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                
+                {isIndustriesOpen && (
+                  <div className="pb-2 space-y-1 bg-white max-h-80 overflow-y-auto">
+                    <Link to="complaint-management-system" className="flex items-center py-2 px-6 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition-all" onClick={() => {setIsMenuOpen(false); setIsIndustriesOpen(false);}}>
+                      <Settings className="w-4 h-4 mr-3 text-blue-600" />
+                      <span className="text-sm">Custom CRM</span>
+                    </Link>
+                    <div className="flex items-center py-2 px-6 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition-all cursor-pointer">
+                      <GraduationCap className="w-4 h-4 mr-3 text-blue-600" />
+                      <span className="text-sm">Education</span>
+                    </div>
+                    <div className="flex items-center py-2 px-6 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition-all cursor-pointer">
+                      <BarChart3 className="w-4 h-4 mr-3 text-blue-600" />
+                      <span className="text-sm">ERP</span>
+                    </div>
+                    <div className="flex items-center py-2 px-6 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition-all cursor-pointer">
+                      <Heart className="w-4 h-4 mr-3 text-blue-600" />
+                      <span className="text-sm">Health Care</span>
+                    </div>
+                    <div className="flex items-center py-2 px-6 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition-all cursor-pointer">
+                      <Building className="w-4 h-4 mr-3 text-blue-600" />
+                      <span className="text-sm">Interior & Architecture</span>
+                    </div>
+                    <div className="flex items-center py-2 px-6 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition-all cursor-pointer">
+                      <Star className="w-4 h-4 mr-3 text-blue-600" />
+                      <span className="text-sm">Kindergarten</span>
+                    </div>
+                    <div className="flex items-center py-2 px-6 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition-all cursor-pointer">
+                      <BookOpen className="w-4 h-4 mr-3 text-blue-600" />
+                      <span className="text-sm">Library</span>
+                    </div>
+                    <div className="flex items-center py-2 px-6 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition-all cursor-pointer">
+                      <Truck className="w-4 h-4 mr-3 text-blue-600" />
+                      <span className="text-sm">Logistics</span>
+                    </div>
+                    <div className="flex items-center py-2 px-6 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition-all cursor-pointer">
+                      <Wrench className="w-4 h-4 mr-3 text-blue-600" />
+                      <span className="text-sm">Manufacturing</span>
+                    </div>
+                    <div className="flex items-center py-2 px-6 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition-all cursor-pointer">
+                      <Home className="w-4 h-4 mr-3 text-blue-600" />
+                      <span className="text-sm">Real Estate</span>
+                    </div>
+                    <div className="flex items-center py-2 px-6 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition-all cursor-pointer">
+                      <Plane className="w-4 h-4 mr-3 text-blue-600" />
+                      <span className="text-sm">Travel & Tourism</span>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              <a className="text-gray-700 hover:text-blue-600 font-medium py-2 px-4 rounded hover:bg-gray-50 transition-colors" onClick={() => setIsMenuOpen(false)}>Contact</a>
+              
+              <button className="bg-gradient-to-r from-blue-600 to-black text-white px-6 py-3 rounded-full w-fit mt-4 hover:shadow-lg transition-all duration-300" onClick={() => setIsMenuOpen(false)}>
                 Get In Touch
               </button>
             </nav>

@@ -128,21 +128,18 @@ const Industries = () => {
         {/* Section Title with Animation */}
         <div className="text-center mb-12 sm:mb-16 animate-fade-in-up">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight max-w-4xl mx-auto">
-            <span className="inline-block animate-slide-in-left">One Vision, Many Industries: Crafting Our</span>
+            <span className="inline-block">One Vision, Many Industries: Crafting Our</span>
             <br className="hidden md:block" />
-            <span className="block mt-1 sm:mt-2 animate-slide-in-right delay-300">Bespoke Solutions For Unique Industry Demands</span>
+            <span className="block mt-1 sm:mt-2">Bespoke Solutions For Unique Industry Demands</span>
           </h2>
         </div>
 
         {/* Industries Grid with Enhanced Cards */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto mb-12">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto mb-12 responsive-grid-md responsive-grid-lg">
           {industries.map((industry, index) => (
             <div
               key={index}
-              className="group relative flex flex-col items-center p-4 sm:p-6 bg-blue-500/20 backdrop-blur-md rounded-2xl border border-blue-300/30 hover:bg-blue-400/30 transition-all duration-500 hover:scale-105 cursor-pointer transform hover:-translate-y-3 shadow-lg hover:shadow-2xl hover:shadow-blue-500/25"
-              style={{
-                animationDelay: `${index * 0.1}s`
-              }}
+              className="group relative flex flex-col items-center p-4 sm:p-6 bg-blue-500/20 backdrop-blur-md rounded-2xl border border-blue-300/30 hover:bg-blue-400/30 transition-all duration-500 hover:scale-105 cursor-pointer transform hover:-translate-y-3 shadow-lg hover:shadow-2xl hover:shadow-blue-500/25 mobile-no-hover"
             >
               {/* Icon Container with Better Styling */}
               <div className="flex justify-center mb-4">
@@ -188,125 +185,7 @@ const Industries = () => {
     
       </div>
 
-      {/* Custom CSS for Enhanced Animations */}
-      <style jsx>{`
-        @keyframes fade-in-up {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        
-        @keyframes slide-in-left {
-          from {
-            opacity: 0;
-            transform: translateX(-50px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-        
-        @keyframes slide-in-right {
-          from {
-            opacity: 0;
-            transform: translateX(50px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-        
-        @keyframes gentle-float {
-          0%, 100% {
-            transform: translateY(0px);
-          }
-          50% {
-            transform: translateY(-8px);
-          }
-        }
-        
-        @keyframes pulse-glow {
-          0%, 100% {
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-          }
-          50% {
-            box-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
-          }
-        }
-        
-        .animate-fade-in-up {
-          animation: fade-in-up 0.8s ease-out forwards;
-          opacity: 0;
-        }
-        
-        .animate-slide-in-left {
-          animation: slide-in-left 0.8s ease-out forwards;
-          opacity: 0;
-        }
-        
-        .animate-slide-in-right {
-          animation: slide-in-right 0.8s ease-out forwards;
-          opacity: 0;
-        }
-        
-        .delay-300 {
-          animation-delay: 0.3s;
-        }
-        
-        /* Enhanced hover effects */
-        .group:hover {
-          animation: gentle-float 2s ease-in-out infinite;
-        }
-        
-        /* Button hover effects */
-        button:hover {
-          animation: pulse-glow 1.5s ease-in-out infinite;
-        }
-        
-        /* Responsive Grid Improvements */
-        @media (max-width: 1024px) {
-          .grid {
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-          }
-        }
-        
-        @media (max-width: 640px) {
-          .grid {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-          }
-        }
-        
-        @media (max-width: 480px) {
-          .grid {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 0.75rem;
-          }
-        }
-        
-        /* Mobile CTA adjustments */
-        @media (max-width: 640px) {
-          .text-center div {
-            padding: 1.5rem;
-          }
-          
-          .text-center h3 {
-            font-size: 1.5rem;
-          }
-          
-          .text-center p {
-            font-size: 1rem;
-          }
-        }
-      `}</style>
+
     </section>
   );
 };

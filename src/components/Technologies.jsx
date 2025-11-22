@@ -122,8 +122,7 @@ const Technologies = () => {
           {techCategories.map((category, categoryIndex) => (
             <div
               key={categoryIndex}
-              className="animate-slide-in-up"
-              style={{ animationDelay: `${categoryIndex * 0.2}s` }}
+              className="animate-fade-in-up"
             >
               {/* Category Header */}
               <div className="text-center mb-6 sm:mb-8 px-4">
@@ -134,12 +133,11 @@ const Technologies = () => {
               </div>
 
               {/* Technology Grid */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 sm:gap-4 md:gap-6 px-2 sm:px-0">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 sm:gap-4 md:gap-6 px-2 sm:px-0 responsive-grid-md responsive-grid-lg">
                 {category.technologies.map((tech, techIndex) => (
                   <div
                     key={techIndex}
-                    className="group relative bg-white rounded-xl sm:rounded-2xl p-4 sm:p-4 md:p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 border border-gray-100 hover:border-gray-200 min-h-[120px] sm:min-h-[140px] flex flex-col justify-center"
-                    style={{ animationDelay: `${(categoryIndex * 0.1) + (techIndex * 0.05)}s` }}
+                    className="group relative bg-white rounded-xl sm:rounded-2xl p-4 sm:p-4 md:p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 border border-gray-100 hover:border-gray-200 min-h-[120px] sm:min-h-[140px] flex flex-col justify-center mobile-no-hover"
                   >
                     {/* Tech Logo */}
                     <div className="flex justify-center mb-3 sm:mb-4">
@@ -192,116 +190,7 @@ const Technologies = () => {
         
       </div>
 
-      {/* Custom Animations */}
-      <style jsx>{`
-        @keyframes fade-in-up {
-          from {
-            opacity: 0;
-            transform: translateY(40px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        
-        @keyframes slide-in-up {
-          from {
-            opacity: 0;
-            transform: translateY(60px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        
-        .animate-fade-in-up {
-          animation: fade-in-up 0.8s ease-out forwards;
-          opacity: 0;
-        }
-        
-        .animate-slide-in-up {
-          animation: slide-in-up 0.8s ease-out forwards;
-          opacity: 0;
-        }
-        
-        /* Smooth hover effects - no conflicting transforms */
-        .group {
-          will-change: transform, box-shadow;
-        }
-        
-        /* Technology Grid Responsive adjustments */
-        @media (max-width: 1024px) {
-          .grid {
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1rem;
-          }
-        }
-        
-        @media (max-width: 768px) {
-          .grid {
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0.75rem;
-          }
-        }
-        
-        @media (max-width: 640px) {
-          .grid {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-          }
-        }
-        
-        @media (max-width: 480px) {
-          .grid {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 0.75rem;
-          }
-          
-          /* Better mobile text sizing for tech cards */
-          .group h4 {
-            font-size: 0.75rem;
-            line-height: 1.2;
-            margin-bottom: 0.25rem;
-          }
-          
-          .group p {
-            font-size: 0.625rem;
-            line-height: 1.3;
-          }
-          
-          /* Disable hover effects on mobile to prevent vibration */
-          .group:hover {
-            transform: none;
-            scale: none;
-          }
-          
-          .group:active {
-            transform: scale(0.98);
-            transition: transform 0.1s ease;
-          }
-        }
-        
-        @media (max-width: 375px) {
-          .grid {
-            gap: 0.5rem;
-          }
-          
-          .group {
-            min-height: 110px;
-            padding: 0.75rem;
-          }
-          
-          .group h4 {
-            font-size: 0.7rem;
-          }
-          
-          .group p {
-            font-size: 0.6rem;
-          }
-        }
-      `}</style>
+
     </section>
   );
 };

@@ -270,8 +270,26 @@ const CustomCRM = () => {
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="flex flex-wrap justify-center items-center gap-6">
+          <div className="max-w-6xl mx-auto">
+            {/* Mobile Layout - Single Row */}
+            <div className="block md:hidden">
+              <div className="relative flex justify-between items-start gap-2 px-2">
+                {/* Connecting line for mobile */}
+                <div className="absolute top-6 sm:top-7 left-8 right-8 h-0.5 bg-blue-300 z-0"></div>
+                
+                {processSteps.map((step, index) => (
+                  <div key={index} className="flex-1 text-center relative z-10">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 bg-blue-600 text-white rounded-full flex items-center justify-center text-lg sm:text-xl font-bold mb-2 mx-auto border-2 border-white shadow-lg">
+                      {step.number}
+                    </div>
+                    <h3 className="font-semibold text-gray-900 text-xs sm:text-sm leading-tight px-1">{step.title}</h3>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Desktop Layout - With Connectors */}
+            <div className="hidden md:flex justify-center items-center gap-6">
               {processSteps.map((step, index) => (
                 <div key={index} className="flex items-center">
                   <div className="text-center">
@@ -281,7 +299,7 @@ const CustomCRM = () => {
                     <h3 className="font-semibold text-gray-900 text-sm mb-1">{step.title}</h3>
                   </div>
                   {index < processSteps.length - 1 && (
-                    <div className="hidden md:block w-12 h-0.5 bg-blue-300 mx-3 -mt-6"></div>
+                    <div className="w-12 h-0.5 bg-blue-300 mx-3 -mt-6"></div>
                   )}
                 </div>
               ))}

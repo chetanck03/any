@@ -56,7 +56,7 @@ const Clients = () => {
   ];
 
   return (
-    <section className="clients-section py-16 sm:py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden">
+    <section className="py-16 sm:py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-50/30 to-purple-50/30"></div>
       <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-200/20 to-purple-200/20 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
@@ -80,12 +80,11 @@ const Clients = () => {
           </div>
 
           {/* Testimonials Grid */}
-          <div className="clients-testimonials-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-0 responsive-grid-sm">
             {testimonials.map((testimonial, index) => (
               <div
                 key={testimonial.id}
-                className="client-testimonial-card group relative bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 text-white flex flex-col"
-                style={{ animationDelay: `${index * 0.2}s` }}
+                className="group relative bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 text-white flex flex-col mobile-no-hover"
               >
                 {/* Quote Icon */}
                 <div className="absolute top-6 left-6 text-blue-200 opacity-50">
@@ -161,12 +160,11 @@ const Clients = () => {
           </div>
 
           {/* Statistics Grid */}
-          <div className="clients-stats-grid grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 px-4 sm:px-0">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 px-4 sm:px-0 responsive-grid-md">
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="client-stat-card group relative bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1 border border-gray-100 text-center min-h-[160px] flex flex-col justify-center"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="group relative bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1 border border-gray-100 text-center min-h-[160px] flex flex-col justify-center mobile-no-hover"
               >
                 {/* Number */}
                 <div className={`text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2 group-hover:scale-105 transition-transform duration-300`}>
@@ -193,173 +191,7 @@ const Clients = () => {
       
       </div>
 
-      {/* Custom Animations */}
-      <style jsx>{`
-        @keyframes fade-in-up {
-          from {
-            opacity: 0;
-            transform: translateY(40px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        
-        @keyframes slide-in-up {
-          from {
-            opacity: 0;
-            transform: translateY(60px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        
-        .animate-fade-in-up {
-          animation: fade-in-up 0.8s ease-out forwards;
-          opacity: 0;
-        }
-        
-        .animate-slide-in-up {
-          animation: slide-in-up 0.8s ease-out forwards;
-          opacity: 0;
-        }
-        
-        /* Clients section specific styles */
-        .clients-section .group {
-          will-change: transform, box-shadow;
-        }
-        
-        /* Reduce container padding on mobile */
-        @media (max-width: 640px) {
-          .clients-section {
-            padding-top: 3rem;
-            padding-bottom: 3rem;
-          }
-        }
-        
-        @media (max-width: 480px) {
-          .clients-section {
-            padding-top: 2.5rem;
-            padding-bottom: 2.5rem;
-          }
-        }
-        
-        /* Mobile optimizations - only for clients section */
-        @media (max-width: 768px) {
-          .clients-section .clients-testimonials-grid {
-            grid-template-columns: repeat(1, 1fr) !important;
-            gap: 1.5rem;
-            padding: 0 0.5rem;
-          }
-          
-          .clients-section .clients-stats-grid {
-            gap: 1rem;
-            padding: 0 0.5rem;
-          }
-        }
-        
-        @media (max-width: 640px) {
-          .clients-section .clients-testimonials-grid {
-            grid-template-columns: repeat(1, 1fr) !important;
-            gap: 1.25rem;
-            padding: 0 0.75rem;
-          }
-          
-          .clients-section .client-testimonial-card {
-            min-height: auto;
-            padding: 1.5rem;
-            margin: 0;
-          }
-          
-          .clients-section .client-testimonial-card p {
-            font-size: 0.875rem;
-            line-height: 1.5;
-          }
-          
-          .clients-section .client-testimonial-card h4 {
-            font-size: 0.875rem;
-          }
-          
-          .clients-section .clients-stats-grid {
-            grid-template-columns: repeat(2, 1fr) !important;
-            gap: 1rem;
-            padding: 0 0.75rem;
-          }
-          
-          .clients-section .client-stat-card {
-            min-height: 140px;
-            padding: 1.25rem;
-          }
-          
-          .clients-section .group:hover {
-            transform: none;
-            scale: none;
-          }
-          
-          .clients-section .group:active {
-            transform: scale(0.98);
-            transition: transform 0.1s ease;
-          }
-        }
-        
-        @media (max-width: 480px) {
-          .clients-section .clients-testimonials-grid {
-            grid-template-columns: repeat(1, 1fr) !important;
-            gap: 1rem;
-            padding: 0 1rem;
-          }
-          
-          .clients-section .client-testimonial-card {
-            min-height: auto;
-            padding: 1.25rem;
-            margin: 0;
-          }
-          
-          .clients-section .client-testimonial-card p {
-            font-size: 0.8rem;
-            line-height: 1.4;
-          }
-          
-          .clients-section .client-testimonial-card h4 {
-            font-size: 0.8rem;
-          }
-          
-          .clients-section .clients-stats-grid {
-            gap: 0.75rem;
-            padding: 0 1rem;
-          }
-          
-          .clients-section .client-stat-card {
-            min-height: 120px;
-            padding: 1rem;
-          }
-        }
-        
-        @media (max-width: 375px) {
-          .clients-section .clients-testimonials-grid {
-            padding: 0 0.5rem;
-            gap: 0.875rem;
-          }
-          
-          .clients-section .client-testimonial-card {
-            min-height: auto;
-            padding: 1rem;
-          }
-          
-          .clients-section .clients-stats-grid {
-            padding: 0 0.5rem;
-            gap: 0.5rem;
-          }
-          
-          .clients-section .client-stat-card {
-            min-height: 110px;
-            padding: 0.875rem;
-          }
-        }
-      `}</style>
+
     </section>
   );
 };

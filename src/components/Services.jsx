@@ -88,26 +88,23 @@ const Services = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         {/* Section Title with Animation */}
         <div className="text-center mb-12 sm:mb-16 animate-fade-in-up">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl  font-bold leading-tight max-w-4xl mx-auto">
-            <span className="inline-block animate-slide-in-left">At Ascentia Labs: We Develop World-Class Solutions</span>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight max-w-4xl mx-auto">
+            <span className="inline-block">At Ascentia Labs: We Develop World-Class Solutions</span>
             <br className="hidden md:block" />
-            <span className="block mt-1 sm:mt-2 animate-slide-in-right delay-300">That Redefine Industry Standards & Add Value!</span>
+            <span className="block mt-1 sm:mt-2">That Redefine Industry Standards & Add Value!</span>
           </h2>
         </div>
 
         {/* Services Grid with Staggered Animations */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-8 max-w-7xl mx-auto responsive-grid-md responsive-grid-lg">
           {services.map((service, index) => (
             <div
               key={index}
-              className={`group relative p-3 sm:p-4 rounded-xl transition-all duration-500 hover:scale-110 cursor-pointer transform hover:-translate-y-2 ${
+              className={`group relative p-3 sm:p-4 rounded-xl transition-all duration-500 hover:scale-110 cursor-pointer transform hover:-translate-y-2 mobile-no-hover ${
                 service.highlighted 
                   ? 'bg-gradient-to-br from-blue-600 to-blue-800 border-2 border-blue-400 shadow-lg shadow-blue-500/25' 
                   : 'bg-gray-800/80 hover:bg-gray-700/90 border border-gray-600/50 hover:border-blue-500/50'
               }`}
-              style={{
-                animationDelay: `${index * 0.1}s`
-              }}
             >
               {/* Icon Container */}
               <div className="flex justify-center mb-3">
@@ -140,119 +137,7 @@ const Services = () => {
         <div className="absolute bottom-1/4 left-1/4 w-1 h-1 bg-white rounded-full animate-float delay-3000"></div> */}
       </div>
 
-      {/* Custom CSS for Enhanced Animations */}
-      <style jsx>{`
-        @keyframes fade-in-up {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        
-        @keyframes slide-in-left {
-          from {
-            opacity: 0;
-            transform: translateX(-50px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-        
-        @keyframes slide-in-right {
-          from {
-            opacity: 0;
-            transform: translateX(50px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-        
-        @keyframes pulse-glow {
-          0%, 100% {
-            box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
-          }
-          50% {
-            box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
-          }
-        }
-        
-        @keyframes float {
-          0%, 100% {
-            transform: translateY(0px);
-          }
-          50% {
-            transform: translateY(-10px);
-          }
-        }
-        
-        .animate-fade-in-up {
-          animation: fade-in-up 0.8s ease-out forwards;
-          opacity: 0;
-        }
-        
-        .animate-slide-in-left {
-          animation: slide-in-left 0.8s ease-out forwards;
-          opacity: 0;
-        }
-        
-        .animate-slide-in-right {
-          animation: slide-in-right 0.8s ease-out forwards;
-          opacity: 0;
-        }
-        
-        .animate-pulse-glow {
-          animation: pulse-glow 2s ease-in-out infinite;
-        }
-        
-        .animate-float {
-          animation: float 3s ease-in-out infinite;
-        }
-        
-        .delay-300 {
-          animation-delay: 0.3s;
-        }
-        
-        .delay-1000 {
-          animation-delay: 1s;
-        }
-        
-        .delay-2000 {
-          animation-delay: 2s;
-        }
-        
-        .delay-3000 {
-          animation-delay: 3s;
-        }
-        
-        /* Responsive Grid Improvements */
-        @media (max-width: 1024px) {
-          .grid {
-            grid-template-columns: repeat(3, 1fr);
-          }
-        }
-        
-        @media (max-width: 640px) {
-          .grid {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 0.75rem;
-          }
-        }
-        
-        @media (max-width: 480px) {
-          .grid {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 0.5rem;
-          }
-        }
-      `}</style>
+
     </section>
   );
 };
