@@ -162,7 +162,6 @@ const Header = () => {
             </div>
             <div className="relative group">
               <Link 
-                to="/industries" 
                 className={`font-medium transition-colors flex items-center ${
                   location.pathname === '/industries' 
                     ? 'text-blue-600' 
